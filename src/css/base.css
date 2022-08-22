@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(0deg , #232526, #414345);
+    height: 100vh;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}

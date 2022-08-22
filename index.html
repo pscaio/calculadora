@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora pscaio</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/base.css" rel="stylesheet">
+    <link href="/src/css/calculadora.css" rel="stylesheet">
+    <link href="/src/css/cabecalho.css" rel="stylesheet">
+    
+</head>
+    <body>
+        <header class="cabecalho">
+            <h1 class="cabecalho__logo">Caio Pereira</h1>
+            <nav class="cabecalho__navegacao">
+                <ul>
+                    <li class="cabecalho__link"><a href="#" target="_blank">Curriculo</a></li>
+                    <li class="cabecalho__link"><a href="#">Projetos</a></li>
+                </ul>
+                <p class="cabecalho__link-email"><a href="mailto: pscaiocontato@gmail.com">pscaiocontato@gmail.com</a></p>
+            </nav>
+        </header>
+
+        <section class="destaque">
+            
+            <div class="calculadora caixa">
+                <h1 class="calculadora__titulo">Calculadora</h1>
+                <p class="resultado" id="resultado"></p>
+                <table class="nao">
+                    <tr>
+                        <td><button class="botao" onclick="limpar()">C</button></td>
+                        <td><button class="botao" onclick="apagar()"><</button></td>
+                        <td><button class="botao" onclick="inserir('/')">/</button></td>
+                        <td><button class="botao" onclick="inserir('*')">*</button></td>
+                    </tr> 
+                    <tr>
+                        <td><button class="botao" onclick="inserir('7')">7</button></td>
+                        <td><button class="botao" onclick="inserir('8')">8</button></td>
+                        <td><button class="botao" onclick="inserir('9')">9</button></td>
+                        <td><button class="botao" onclick="inserir('-')">-</button></td>
+                    </tr> 
+                    <tr>
+                        <td><button class="botao" onclick="inserir('4')">4</button></td>
+                        <td><button class="botao" onclick="inserir('5')">5</button></td>
+                        <td><button class="botao" onclick="inserir('6')">6</button></td>
+                        <td><button class="botao" onclick="inserir('+')">+</button></td>
+                    </tr> 
+                    <tr>
+                        <td><button class="botao" onclick="inserir('1')">1</button></td>
+                        <td><button class="botao" onclick="inserir('2')">2</button></td>
+                        <td><button class="botao" onclick="inserir('3')">3</button></td>
+                        <td rowspan="2"><button class="botao-igual botao">=</button></td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2"><button class="btn-0 botao" onclick="inserir('0')">0</button></td>
+                        <td><button class="botao" onclick="inserir('.')">.</button></td>
+                    </tr> 
+                </table>
+            </div>
+        </section>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
