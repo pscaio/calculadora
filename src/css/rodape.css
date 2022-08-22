@@ -1,0 +1,47 @@
+.rodape {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    padding-top: .9rem;
+    padding-bottom: 2rem;
+    background: rgb(#fff, #fff, #fff);
+}
+
+.rodape__paragrafo {
+    padding-bottom: .9rem;
+    padding-top: .7rem;
+}
+
+.rodape__social {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rodape__midia {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: .2rem 1rem;
+}
+
+.icon-social {
+    width: 42px;
+    height: 42px;
+}
+
+.rodape__midia:hover{
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+    
+    .rodape__social {
+        justify-content: center;
+        flex-direction: row; 
+        flex-wrap: nowrap;   
+    }
+    
+    
+}
+

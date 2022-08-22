@@ -2,25 +2,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding-top: 1rem;
-    padding-bottom: 1rem ;
+    padding-top: 1rem; 
+    margin: 0 .3rem;
     color: #fff;
 }
 
 .cabecalho__logo {
-    font-weight: bold;
     text-transform: uppercase;
-    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
 }
 
 .cabecalho__link {
     display: none;
-    color: var(--preto-titulo);
 }
 
 .cabecalho__link-email {
     display: inline-block;
-    font-family: var(--fonte-texto);
     font-size: .8rem;
 }
 
@@ -51,20 +48,27 @@
         font-size: 1.1rem;
         display: inline-block;
         padding-right: 15px;
-        font-family: var(--fonte-texto);
+      
     }
 
     .cabecalho__link:hover, .cabecalho__link-email:hover {
         transition-duration: 0.3s;
         transform: scale(0.9);
-        color: var(--cor-botao);
     }
 
     .cabecalho__link-email {
         display: inline-block;
         font-size: 1.1rem;
-        font-family: var(--fonte-texto);
-
     }
 
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho__logo {
+        font-size: 1.9rem;
+    }
+    .cabecalho__link , .cabecalho__link-email {
+        font-size: 1.3rem;
+    }
+    
 }

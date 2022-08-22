@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(0deg , #232526, #414345);
+    background: linear-gradient(to right, #373B44, #4286f4);
     height: 100vh;
     color: #fff;
 }
@@ -9,3 +9,4 @@ a {
     text-decoration: none;
     text-transform: uppercase;
 }
+

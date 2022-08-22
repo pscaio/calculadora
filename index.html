@@ -1,66 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Calculadora pscaio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
 
     <link href="/src/css/reset.css" rel="stylesheet">
     <link href="/src/css/base.css" rel="stylesheet">
     <link href="/src/css/calculadora.css" rel="stylesheet">
     <link href="/src/css/cabecalho.css" rel="stylesheet">
-    
-</head>
-    <body>
-        <header class="cabecalho">
-            <h1 class="cabecalho__logo">Caio Pereira</h1>
-            <nav class="cabecalho__navegacao">
-                <ul>
-                    <li class="cabecalho__link"><a href="#" target="_blank">Curriculo</a></li>
-                    <li class="cabecalho__link"><a href="#">Projetos</a></li>
-                </ul>
-                <p class="cabecalho__link-email"><a href="mailto: pscaiocontato@gmail.com">pscaiocontato@gmail.com</a></p>
-            </nav>
-        </header>
+    <link href="/src/css/rodape.css" rel="stylesheet">
 
-        <section class="destaque">
-            
-            <div class="calculadora caixa">
-                <h1 class="calculadora__titulo">Calculadora</h1>
-                <p class="resultado" id="resultado"></p>
-                <table class="nao">
-                    <tr>
-                        <td><button class="botao" onclick="limpar()">C</button></td>
-                        <td><button class="botao" onclick="apagar()"><</button></td>
-                        <td><button class="botao" onclick="inserir('/')">/</button></td>
-                        <td><button class="botao" onclick="inserir('*')">*</button></td>
-                    </tr> 
-                    <tr>
-                        <td><button class="botao" onclick="inserir('7')">7</button></td>
-                        <td><button class="botao" onclick="inserir('8')">8</button></td>
-                        <td><button class="botao" onclick="inserir('9')">9</button></td>
-                        <td><button class="botao" onclick="inserir('-')">-</button></td>
-                    </tr> 
-                    <tr>
-                        <td><button class="botao" onclick="inserir('4')">4</button></td>
-                        <td><button class="botao" onclick="inserir('5')">5</button></td>
-                        <td><button class="botao" onclick="inserir('6')">6</button></td>
-                        <td><button class="botao" onclick="inserir('+')">+</button></td>
-                    </tr> 
-                    <tr>
-                        <td><button class="botao" onclick="inserir('1')">1</button></td>
-                        <td><button class="botao" onclick="inserir('2')">2</button></td>
-                        <td><button class="botao" onclick="inserir('3')">3</button></td>
-                        <td rowspan="2"><button class="botao-igual botao">=</button></td>
-                    </tr> 
-                    <tr>
-                        <td colspan="2"><button class="btn-0 botao" onclick="inserir('0')">0</button></td>
-                        <td><button class="botao" onclick="inserir('.')">.</button></td>
-                    </tr> 
-                </table>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__logo">Caio Pereira</h1>
+        <nav class="cabecalho__navegacao">
+            <p class="cabecalho__link"><a href="https://pscaio.github.io/site-portifolio/" target="_blank">Portfólio</a></p>
+            <p class="cabecalho__link-email"><a href="mailto: pscaiocontato@gmail.com">pscaiocontato@gmail.com</a></p>
+        </nav>
+    </header>
+
+    <section class="calculadora">
+        <div class="saida">
+            <div class="operador-anterior" data-previous-op></div>
+            <div class="operador-atual" data-current-op></div>
+        </div>
+
+        <button class="botao dois-blocos" data-all-clear>AC</button>
+        <button class="botao" data-delete>⌫</button>
+        <button class="operador botao" data-operator>÷</button>
+        <button class="botao" data-number>1</button>
+        <button class="botao" data-number>2</button>
+        <button class="botao" data-number>3</button>
+        <button class="operador botao" data-operator>×</button>
+        <button class="botao" data-number>4</button>
+        <button class="botao" data-number>5</button>
+        <button class="botao" data-number>6</button>
+        <button class="operador botao" data-operator>+</button>
+        <button class="botao" data-number>7</button>
+        <button class="botao" data-number>8</button>
+        <button class="botao" data-number>9</button>
+        <button class="operador botao" data-operator>-</button>
+        <button class="botao dois-blocos" data-number>.</button>
+        <button class="botao" data-number>0</button>
+        <button class="operador botao" data-equals>=</button>
+    </section>
+
+    <footer class="rodape">
+        <p class="rodape__paragrafo">Desenvolvido por Caio Pereira 2022 &copy; </p>
+        <section class="rodape__social">
+            <div>
+                <a href="https://www.linkedin.com/in/pscaio/" target="_blank" rel="noopener noreferrer"
+                    class="rodape__midia"><img class="icon-social" src="src/img/linkedin.png" alt="Linkedin"></a>
+            </div>
+            <div>
+                <a href="https://github.com/pscaio" target="_blank" rel="noopener noreferrer" class="rodape__midia"><img
+                        class="icon-social" src="src/img/github.png" alt="Github"></a></div>
+            <div>
+                <a href="https://www.behance.net/pscaio" target="_blank" rel="noopener noreferrer"
+                    class="rodape__midia"><img class="icon-social" src="src/img/behance.png" alt="Behance"></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/p.scaio/" target="_blank" rel="noopener noreferrer"
+                    class="rodape__midia"><img class="icon-social" src="src/img/instagram.png"
+                        alt="Instagram"></a>
+            </div>
+            <div>
+                <a href="https://twitter.com/pscaio_" target="_blank" rel="noopener noreferrer"
+                    class="rodape__midia"><img class="icon-social" src="src/img/twitter.png" alt="Twitter"></a>
             </div>
         </section>
-        <script src="src/js/script.js"></script>
-    </body>
+        
+    </footer>
+    <script src="src/js/script.js"></script>
+</body>
+
 </html>
